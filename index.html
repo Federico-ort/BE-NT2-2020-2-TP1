@@ -1,19 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>TODO App</title>
-    <link rel="stylesheet" type="text/css" href="./styles.css" />
-  </head>
-  <body>
-    <div class="container center">
-      <h1 class="center title">TODO App</h1>
-      <div class="flow-right controls">
-        <span>Item count: <span id="item-count">0</span></span>
-        <span>Unchecked count: <span id="unchecked-count">0</span></span>
+
+<head>
+  <title>TODO App</title>
+  <!-- BOOTSTRAP 5 -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!-- FONT AWESOME-->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <!-- GOOGLE FONTS-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet">
+  <!-- ANIMATE.CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="./styles.css" />
+</head>
+
+<body>
+  
+  <div class="container">
+    <h1 class="center title">TODO App</h1>
+    <div class="flow-right controls">
+      <div class="tarjeta">
+        <span class="numeros" id="item-count">0</span>
+        <br>
+        <span><i class="far fa-calendar-check"></i> Item count: </span>
       </div>
-      <button class="button center" onClick="addTodo()">Agregar Tarea</button>
-      <ul id="todo-list" class="todo-list"></ul>
+     <div class="tarjeta">
+      <span class="numeros" id="unchecked-count">0</span>
+      <br>
+      <span><i class="far fa-calendar-times"></i> Unchecked count: </span>
+     </div>
+      
     </div>
-    <script src="./script.js"></script>
-  </body>
+    <br>
+    <button class="btn btn-outline-dark" onClick="addTodo()">Agregar Tarea</button>
+    <br />
+    <div><input type='checkbox' onclick="marcarTodos(this)" /><span>Tildar / Destildar todos</span></div>
+    <ul id="todo-list" class="todo-list"></ul>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
 </html>
